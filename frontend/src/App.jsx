@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Task Manager crafted  by nit sanghani proffional devops engineer @azilen technologies Ahemdabad </h1>
+      <h1>Task Manager crafted  by nit sanghani proffional devops engineer @azilen technologies Ahemdabad gujarat </h1>
 
       <form className="input-group" onSubmit={addTask}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%' }}>
@@ -101,7 +101,7 @@ function App() {
           </li>
         ))}
         {!loading && tasks.length === 0 && !error && (
-          <div style={{ color: '#94a3b8' }}>No tasks found. Add one above!</div>
+          <div style={{ color: '#03152dff' }}>No tasks found. Add one above!</div>
         )}
       </ul>
     </div>
