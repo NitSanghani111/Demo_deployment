@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/tasks'
+const API_URL = import.meta.env.VITE_API_URL || 'https://api.shashvatenterprise.com/tasks'
 
 function App() {
   const [tasks, setTasks] = useState([])

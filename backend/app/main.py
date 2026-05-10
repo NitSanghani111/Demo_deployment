@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, String, Boolean, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 import os
 from dotenv import load_dotenv
 
@@ -44,7 +45,7 @@ class TaskResponse(TaskBase):
 app = FastAPI(title="Task Manager API")
 
 # CORS
-origins = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
+origins = os.getenv("CORS_ORIGINS", "https://app.shashvatenterprise.com").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
